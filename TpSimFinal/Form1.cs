@@ -86,7 +86,7 @@ namespace TpSimFinal
 
         private void calcularDivisionPresupuesto(object sender, EventArgs e)
         {
-            CreateDistribucionPresupuesto();
+            //CreateDistribucionPresupuesto();
         }
 
         private void CreateDistribucionPresupuesto()
@@ -95,14 +95,14 @@ namespace TpSimFinal
             var labels = panelPresupuesto.Controls.OfType<Label>().Where(x => x.Name.Contains("lblCantPres"));
             var presupuesto = Convert.ToDecimal(this.txtPresupuesto.Text, new CultureInfo("en-US")) / labels.Count();
             var i = 4;
-            var prob = (double)((decimal)1 / 4);
+            var prob = (double)((decimal)1 / labels.Count());
             foreach (Control fi in labels)
             {
                 var name = string.Format("lblCantPres{0}", i);
                 if (fi.Name == name)
                 {
-                    fi.Text = string.Format("{0}", presupuesto * i);
-                    distribucionInversion.Add(new Probabilidades<double>(Convert.ToDouble(presupuesto * i), prob));
+                    var value = Convert.ToDouble(fi.Text.ToString());
+                    distribucionInversion.Add(new Probabilidades<double>(Convert.ToDouble( value) , prob));
                 }
                 i--;
             }
@@ -131,7 +131,7 @@ namespace TpSimFinal
         private void btnSimular_Click(object sender, EventArgs e)
         {
             var validacion = validar();
-            if (validacion != null)
+            if (validacion.Count > 0)
             {
                 var a = "";
                 foreach (var item in validacion)
@@ -238,6 +238,7 @@ namespace TpSimFinal
             //lblProbabilidad.Text = (resultInversiones.Contador / int.Parse(txtNroIteraciones.Text)).ToString();
 
         }
+
 
     }
 }

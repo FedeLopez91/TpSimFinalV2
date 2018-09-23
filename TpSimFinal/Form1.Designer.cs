@@ -93,16 +93,16 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvSimulacion = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblProbabilidad = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblResultadoC = new System.Windows.Forms.Label();
             this.lblResultadoB = new System.Windows.Forms.Label();
             this.lblResultadoA = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblProbabilidad = new System.Windows.Forms.Label();
+            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbParametros.SuspendLayout();
@@ -127,8 +127,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacion)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -772,15 +772,6 @@
             this.tabPage3.Text = "Resultados";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dgvResultado
-            // 
-            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultado.Location = new System.Drawing.Point(15, 128);
-            this.dgvResultado.Name = "dgvResultado";
-            this.dgvResultado.RowTemplate.Height = 24;
-            this.dgvResultado.Size = new System.Drawing.Size(1133, 540);
-            this.dgvResultado.TabIndex = 0;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblProbabilidad);
@@ -797,6 +788,25 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultado";
+            // 
+            // lblProbabilidad
+            // 
+            this.lblProbabilidad.AutoSize = true;
+            this.lblProbabilidad.Location = new System.Drawing.Point(651, 22);
+            this.lblProbabilidad.Name = "lblProbabilidad";
+            this.lblProbabilidad.Size = new System.Drawing.Size(13, 20);
+            this.lblProbabilidad.TabIndex = 7;
+            this.lblProbabilidad.Text = ".";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(526, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Probabilidad:";
             // 
             // lblResultadoC
             // 
@@ -855,24 +865,14 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Proyecto A:";
             // 
-            // label9
+            // dgvResultado
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(526, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 20);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Probabilidad:";
-            // 
-            // lblProbabilidad
-            // 
-            this.lblProbabilidad.AutoSize = true;
-            this.lblProbabilidad.Location = new System.Drawing.Point(651, 22);
-            this.lblProbabilidad.Name = "lblProbabilidad";
-            this.lblProbabilidad.Size = new System.Drawing.Size(13, 20);
-            this.lblProbabilidad.TabIndex = 7;
-            this.lblProbabilidad.Text = ".";
+            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultado.Location = new System.Drawing.Point(15, 128);
+            this.dgvResultado.Name = "dgvResultado";
+            this.dgvResultado.RowTemplate.Height = 24;
+            this.dgvResultado.Size = new System.Drawing.Size(1133, 540);
+            this.dgvResultado.TabIndex = 0;
             // 
             // Form1
             // 
@@ -916,9 +916,9 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacion)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.ResumeLayout(false);
 
         }
